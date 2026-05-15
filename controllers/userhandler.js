@@ -7,7 +7,19 @@ const getAllUsers = (req, res) => {
   };
   res.status(200).json(resData);
 };
-const getUserById = (req, res) => {};
+const getUserById = (req, res) => {
+  const userId = req.params.id;
+  const user = AllUsers.find((item) => item.id == userId);
+  if (!user) {
+    return res.status(404).json({
+      message: "User not found",
+    });
+  }
+  res.json({
+    message: `User with id ${userId} fetched successfully `,
+    user,
+  });
+};
 const createUser = (req, res) => {};
 const updateUser = (req, res) => {};
 const deleteUser = (req, res) => {};
