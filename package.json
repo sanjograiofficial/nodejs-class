@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "start": "nodemon task1.js",
+    "start": "nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
